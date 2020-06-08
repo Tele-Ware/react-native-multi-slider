@@ -31,7 +31,7 @@ export interface LabelProps {
 export interface MultiSliderProps {
     values?: number[];
 
-    onValuesChange?: (values: number[]) => void;
+    onValuesChange?: (values: number) => void;
     onValuesChangeStart?: () => void;
     onValuesChangeFinish?: (values: number[]) => void;
 
@@ -55,13 +55,13 @@ export interface MultiSliderProps {
     step?: number;
 
     optionsArray?: number[];
-
+    LTR?: boolean;
     containerStyle?: ViewStyle;
     trackStyle?: ViewStyle;
     selectedStyle?: ViewStyle;
-    unselectedStyle?: ViewStyle;
+    unselectedStyle?: ViewStyle | ViewStyle[];
     markerContainerStyle?: ViewStyle;
-    markerStyle?: ViewStyle;
+    markerStyle?: ViewStyle | ViewStyle[];
     pressedMarkerStyle?: ViewStyle;
     valuePrefix?: string;
     valueSuffix?: string;
@@ -79,4 +79,4 @@ export interface MultiSliderProps {
     vertical?: boolean;
 }
 
-export default class MultiSlider extends React.Component<MultiSliderProps> {}
+export default class MultiSlider extends React.Component<MultiSliderProps> { }
