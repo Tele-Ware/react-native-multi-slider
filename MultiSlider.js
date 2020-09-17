@@ -367,13 +367,13 @@ export default class MultiSlider extends React.Component {
     // const colors = 
     return (
       <View style={[styles.container, this.props.containerStyle, {}]}>
-        <View style={[styles.fullTrack, { width: sliderLength, alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }]}>
+        <View style={[styles.fullTrack, { width: sliderLength, alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }, this.props.fullTrackStyle]}>
           <LinearGradient
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
-            colors={['#B37E29', '#F8DD7B', '#FFF1A4', '#F8DD7B', '#B37E10']}
+            colors={['#fff', '#fff', '#fff', '#fff', '#fff']}
             style={{
-              borderRadius: RFValue(10),
+              // borderRadius: RFValue(10),
             }}>
             <View
               style={[
@@ -388,7 +388,7 @@ export default class MultiSlider extends React.Component {
           <LinearGradient
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
-            colors={['#B37E29', '#F8DD7B', '#FFF1A4', '#F8DD7B', '#B37E10']}
+            colors={['#fff', '#fff', '#fff', '#fff', '#fff']}
             style={{
               // bottom:10,
               // alignSelf:'center',justifyContent:'center',alignItems:'center'
