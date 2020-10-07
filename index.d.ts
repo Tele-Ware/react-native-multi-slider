@@ -30,7 +30,7 @@ export interface LabelProps {
 
 export interface MultiSliderProps {
     values?: number[];
-
+    onValuesChange?: (val: string[]) => void;
     onValuesChange?: (values: number) => void;
     onValuesChangeStart?: () => void;
     onValuesChangeFinish?: (values: number[]) => void;
@@ -56,10 +56,12 @@ export interface MultiSliderProps {
 
     optionsArray?: number[];
     LTR?: boolean;
-    containerStyle?: ViewStyle;
+    containerStyle?: ViewStyle | ViewStyle[];
+    markerSize?: number
     trackStyle?: ViewStyle;
     selectedStyle?: ViewStyle;
     unselectedStyle?: ViewStyle | ViewStyle[];
+    fullTrackStyle?: ViewStyle | ViewStyle[];
     markerContainerStyle?: ViewStyle;
     markerStyle?: ViewStyle | ViewStyle[];
     pressedMarkerStyle?: ViewStyle;
